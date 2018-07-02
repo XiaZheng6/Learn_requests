@@ -141,7 +141,7 @@ ADD supervisord.conf /etc/
 # Vhost Folder: /usr/local/nginx/conf/vhost
 # php extfile ini Folder: /usr/local/php/etc/conf.d
 # php extfile Folder: /data/phpextfile
-VOLUME ["/data/www", "/usr/local/nginx/conf/ssl", "/usr/local/nginx/conf/vhost", "/data/phpextini", "/data/phpextfile"]
+VOLUME ["/data/www", "/usr/local/nginx/conf/ssl","/usr/local/nginx/conf/rewrite","/usr/local/nginx/conf/vhost", "/data/phpextini", "/data/phpextfile"]
 
 ADD index.php /data/www/
 
@@ -151,6 +151,7 @@ ADD index.php /data/www/
 
 #Update nginx config
 ADD nginx.conf /usr/local/nginx/conf/
+ADD thinkphp.conf /usr/local/nginx/conf/rewrite/
 
 #Start
 ADD start.sh /
