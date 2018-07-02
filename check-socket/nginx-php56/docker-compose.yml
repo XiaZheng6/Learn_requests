@@ -4,8 +4,8 @@ services:
     image: "neon/web:latest"
     ports:
      - "16888:80"
-    links:
-      - socket
+    # links:
+    #   - socket
   api:
     image: "neon/api:latest"
     ports:
