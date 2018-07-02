@@ -49,6 +49,7 @@ chown -R www.www $DATA_DIR
 if [[ -n "$PROXY_WEB" ]]; then
 
     [ -f "${Nginx_Install_Dir}/conf/ssl" ] || mkdir -p $Nginx_Install_Dir/conf/ssl
+    [ -f "${Nginx_Install_Dir}/conf/rewrite" ] || mkdir -p $Nginx_Install_Dir/conf/rewrite
     [ -f "${Nginx_Install_Dir}/conf/vhost" ] || mkdir -p $Nginx_Install_Dir/conf/vhost
 
     if [ -z "$PROXY_DOMAIN" ]; then
